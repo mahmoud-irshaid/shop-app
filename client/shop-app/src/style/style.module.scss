@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+    font-family: 'PT Sans', sans-serif;
+
+    a {
+        color: black;
+    }
+}
+
+
+.container {
+    width: 90vmin;
+    margin: 3% auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    gap: 2vw;
+    border-radius: .5rem;
+    background: white;
+    box-shadow:
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    ;
+
+
+    .form {
+        width: 90%;
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+
+        div {
+            width: 100%;
+            display: inherit;
+            flex-direction: column;
+            gap: 1vw;
+
+
+
+            input[type=submit] {
+                height: 3em;
+                cursor: pointer;
+                border: 0;
+                color: white;
+                border-radius: 3em;
+            }
+        }
+    }
+
+    .second {
+        margin: 1em 0;
+
+        p {
+            &::before {
+                content: '';
+                width: 4.5em;
+                height: .1em;
+                position: absolute;
+                margin-top: 12px;
+                margin-left: -5.7em;
+                background: gray;
+            }
+
+            &::after {
+                content: '';
+                width: 4.5em;
+                height: .1em;
+                position: absolute;
+                margin-top: 12px;
+                margin-left: 1.3em;
+                background: gray;
+            }
+        }
+
+        a {
+            button {
+                width: 100%;
+                height: 3em;
+                border: 3px solid #0092e0;
+                cursor: pointer;
+                color: #0092e0;
+                border-radius: 3em;
+                background: 0;
+
+                margin: 1em 0;
+
+                &:active {
+                    transition: all .1s ease;
+                    background-color: #0076b6;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    h2 {
+        width: 90%;
+        text-align: left;
+        margin-top: 5%;
+    }
+}
+
+
+.log {
+    width: 63vmin;
+    height: max-content;
+    overflow: hidden;
+    position: relative;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 100%;
+        box-shadow: unset;
+    }
+
+    .log {
+        width: 100%;
+        box-shadow: unset;
+    }
+}
+
+
+.err {
+    border-color: tomato !important;
+}
+
+.errMsg {
+    color: tomato;
+    text-align: right;
+}
